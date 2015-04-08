@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="span12 header clearfix">
+      <h1><a href="/">Katie DeGroot</a></h1>
+      <ul>
+        <li><a href="/images/"{% if page.title == "Images" %} class="on"{% elsif page.categories contains "images" %} class="on"{% endif %}>Images</a></li>
+        <li><a href="/prints/"{% if page.title == "Prints" %} class="on"{% endif %}>Prints</a></li>
+        <li><a href="/bio/"{% if page.title == "Bio" %} class="on"{% endif %}>Bio</a></li>
+        <li><a href="/contact/"{% if page.title == "Contact" %} class="on"{% endif %}>Contact</a></li>
+        <li><a href="/statement/"{% if page.title == "Statement" %} class="on"{% endif %}>Statement</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

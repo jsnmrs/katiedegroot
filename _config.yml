@@ -1,0 +1,16 @@
+# Site settings
+title: Katie DeGroot
+description: "The work of artist Katie DeGroot"
+baseurl: ""
+url: "http://katiedegroot.com"
+
+safe: true
+lsi: false
+source: .
+destination: _site
+
+markdown: kramdown
+permalink: /:categories/:year/:title/
+timezone: America/New_York
+
+exclude: [node_modules, Gemfile, Gemfile.lock, Gruntfile.js, package.json]
