@@ -1,16 +1,22 @@
-# Site settings
-title: Katie DeGroot
-description: "The work of artist Katie DeGroot"
+name: Katie DeGroot
+description: The work of artist Katie DeGroot
+url: //katiedegroot.com
 baseurl: ""
-url: "http://katiedegroot.com"
 
-safe: true
+port: 4000
+host: 127.0.0.1
+sass:
+  sass_dir: _scss
+  style: :compressed
 lsi: false
+markdown: kramdown
 source: .
 destination: _site
-
-markdown: kramdown
 permalink: /:categories/:year/:title/
 timezone: America/New_York
 
-exclude: [node_modules, Gemfile, Gemfile.lock, Gruntfile.js, package.json]
+exclude: [node_modules, '.sass-cache', Gemfile, Gemfile.lock, README.md, package.json, Gruntfile.js, .scss-lint.yml]
+
+collections:
+  content:
+    output: true
