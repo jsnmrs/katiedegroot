@@ -20,14 +20,14 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          src: ['Gruntfile.js', 'js/lib/katiedegroot.js']
+          src: ['Gruntfile.js', 'js/lib/scripts.js']
         }
       }
     },
 
     concat: {
       dist: {
-        src: ['js/vendor/jquery.js', 'js/vendor/jquery.fancybox.js', 'js/lib/katiedegroot.js'],
+        src: ['js/vendor/jquery.js', 'js/vendor/jquery.fancybox.js', 'js/lib/scripts.js'],
         dest: 'js/scripts.js',
       },
     },
@@ -74,6 +74,10 @@ module.exports = function(grunt) {
 
     imagemin: {
       dynamic: {
+        options: {
+          optimizationLevel: 5,
+          progressive: true
+        },
         files: [{
           expand: true,
           cwd: 'img/', // source directory
@@ -194,7 +198,9 @@ module.exports = function(grunt) {
             'The “banner” role is unnecessary for element “header”.',
             'The “complementary” role is unnecessary for element “aside”.',
             'The “contentinfo” role is unnecessary for element “footer”.',
-            'The “frameborder” attribute on the “iframe” element is obsolete. Use CSS instead.'
+            'The “frameborder” attribute on the “iframe” element is obsolete. Use CSS instead.',
+            'This document appears to be written in Italian but the “html” start tag has “lang="en"”. Consider using “lang="it"” (or variant) instead.',
+            'This document appears to be written in Somali but the “html” start tag has “lang="en"”. Consider using “lang="so"” (or variant) instead.'
           ]
         },
         src: ["_site/**/*.html", ]
@@ -269,7 +275,7 @@ module.exports = function(grunt) {
   // 1. Compiles SCSS
   // 2. Autoprefixes compiled CSS
   // 3. Minifies prefixed, compiled CSS
-  grunt.registerTask('css', ['sass', 'postcss']);
+  grunt.registerTask('css', ['sass', 'postcss', 'scsslint']);
 
   // "grunt js"
   // 1. Lints JS files
@@ -284,7 +290,7 @@ module.exports = function(grunt) {
   // 4. Runs SCSS linter
   // 5. Runs image optimization
   // 6. Builds Jekyll site
-  grunt.registerTask('build', ['clean', 'js', 'css', 'scsslint', 'imagemin', 'shell:jekyllBuildDev']);
+  grunt.registerTask('build', ['clean', 'js', 'css', 'imagemin', 'shell:jekyllBuildDev']);
 
   // "grunt serve"
   // 1. runs "grunt build" task
