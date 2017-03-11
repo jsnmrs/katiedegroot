@@ -1,0 +1,22 @@
+// Media Queries
+
+// Min-width based
+@mixin bp($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// Max-width based
+@mixin bp-max($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+// Between two widths
+@mixin bp-bw($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

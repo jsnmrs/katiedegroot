@@ -1,0 +1,48 @@
+@import 'vendor/neat/neat-helpers';
+
+// Colors
+$black:                 #222;
+$black-print:           #000;
+$black-trans:           rgba(0, 0, 0, 0.3);
+$gray:                  #737373;
+$green:                 #5e7d2f;
+$green-dark:            #37510f;
+
+$link:                  $green;
+$link-visited:          $green;
+$link-hover:            $green-dark;
+$link-focus:            $green-dark;
+
+// Backgrounds
+$accent:                #ddd;
+$code:                  #f0f6f9;
+$white:                 #fff;
+$white-trans:           rgba(255, 255, 255, 0.7);
+
+// Fonts
+$font-body:             'Open Sans', sans-serif;
+$font-heading:          $font-body;
+
+// Breakpoints
+$small:                 24em; // 384px
+$small-2:               29.75em; // 476px
+$small-3:               39.8em; // 637px
+$medium:                46.8em; // 749px
+$medium-2:              48.125em; // 770px
+$medium-3:              50em; // 800px
+$large:                 60em; // 960px
+$large-2:               66em; // 1056px
+$large-3:               73em; // 1168px
+$xlarge:                89em; // 1424px
+$xxlarge:               93em; // 1488px
+$content-max-width:     75em; // 1200px
+
+// Grid settings
+$column: 5.625em;
+$gutter: 1.875em;
+$grid-columns: 12;
+$max-width: $content-max-width;
+
+// Define your grid breakpoints
+$tablet: new-breakpoint(max-width $medium 8);
+$mobile: new-breakpoint(max-width $small-2 4);

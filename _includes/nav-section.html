@@ -1,10 +1,8 @@
 <div class="container">
-  <div class="row">
-    <div class="span12 imagenav clearfix">{% for category in site.categories %}{% assign catg_name = category.first %}{% if catg_name == page.category %}{% assign catg_posts = category.last %}{% endif %}{% endfor %}{% for post in catg_posts %}{% if post.title == page.title %}{% unless forloop.last %}{% assign next = catg_posts[forloop.index] %}
-      <a href="{{ site.baseurl }}{{ next.url }}" class="prev">{{ next.title }}</a>{% endunless %}{% unless forloop.first %}
-      <a href="{{ site.baseurl }}{{ prev.url }}" class="next">{{ prev.title }}</a>{% endunless %}{% if forloop.last %}
-      <a href="/{{ page.category }}/" class="prev">Back to {{ page.category }}</a>{% endif %}{% if forloop.first %}
-      <a href="/{{ page.category }}/" class="next">Back to {{ page.category }}</a>{% endif %}{% endif %}{% assign prev = post %}{% endfor %}
-    </div>
+  <div class="imagenav">{% for category in site.categories %}{% assign catg_name = category.first %}{% if catg_name == page.category %}{% assign catg_posts = category.last %}{% endif %}{% endfor %}{% for post in catg_posts %}{% if post.title == page.title %}{% unless forloop.last %}{% assign next = catg_posts[forloop.index] %}
+    <a href="{{ site.baseurl }}{{ next.url }}" class="prev">{{ next.title }}</a>{% endunless %}{% unless forloop.first %}
+    <a href="{{ site.baseurl }}{{ prev.url }}" class="next">{{ prev.title }}</a>{% endunless %}{% if forloop.last %}
+    <a href="/{{ page.category }}/" class="prev">Back to {{ page.category }}</a>{% endif %}{% if forloop.first %}
+    <a href="/{{ page.category }}/" class="next">Back to {{ page.category }}</a>{% endif %}{% endif %}{% assign prev = post %}{% endfor %}
   </div>
 </div>

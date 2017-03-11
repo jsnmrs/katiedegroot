@@ -1,0 +1,19 @@
+---
+layout: default
+title: Prints
+permalink: prints/
+---
+
+<div class="container drop">
+  <div class="half">
+    <a href="/img/2014-tribute-to-dead-flowers-detail.jpg" data-fancybox><img src="/img/2014-tribute-to-dead-flowers.jpg" alt="A Tribute to Dead Flowers"></a>
+  </div>
+
+  <div class="half description">
+    <h2>A Tribute to Dead Flowers</h2>
+    <h3><a href="/prints/2014/big-sun/">View the series</a></h3>
+    <ul>{% for post in site.categories["prints"] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</div>

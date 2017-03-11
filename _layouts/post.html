@@ -5,15 +5,13 @@ layout: default
 {% include nav-section.html %}
 
 <div class="container">
-  <div class="row">
-    <div class="span6">
-      <a href="/img/{{page.year}}-{{page.slug}}-detail.jpg" data-fancybox data-caption="{{page.title}} - detail"><img src="/img/{{page.year}}-{{page.slug}}.jpg" alt="{{page.title}} - {{page.year}}"></a>
-    </div>
+  <div class="half">
+    <a href="/img/{{page.year}}-{{page.slug}}-detail.jpg" data-fancybox data-caption="{{page.title}} - detail"><img src="/img/{{page.year}}-{{page.slug}}.jpg" alt="{{page.title}} - {{page.year}}"></a>
+  </div>
 
-    <div class="span6 description">
-      <h2>{{page.title}}</h2>
-      <p>{{page.description}} - {{page.year}}</p>
-      <p><a href="/img/{{page.year}}-{{page.slug}}-detail.jpg" data-fancybox data-caption="{{page.title}} - detail">View Detail</a></p>
-    </div>
+  <div class="half description">
+    <h2>{{page.title}}</h2>
+    <p>{{page.description}} - {{page.year}}</p>
+    <p><a href="/img/{{page.year}}-{{page.slug}}-detail.jpg" data-fancybox data-caption="{{page.title}} - detail">View Detail</a></p>
   </div>
 </div>
