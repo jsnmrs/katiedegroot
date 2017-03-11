@@ -20,6 +20,10 @@ img {
   margin-top: 2em;
   margin-bottom: 2em;
 
+  @include media($tablet) {
+    margin-bottom: 1em;
+  }
+
   a {
     &:hover,
     &.on {
@@ -130,6 +134,10 @@ img {
 
 .drop {
   margin-top: 4em;
+
+  @include media($tablet) {
+    margin-top: 2em;
+  }
 }
 
 .full {

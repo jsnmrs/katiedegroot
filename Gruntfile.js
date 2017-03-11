@@ -59,7 +59,7 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         map: {
-          inline: true // maintain embedded sourcemap
+          inline: false // maintain embedded sourcemap
         },
         processors: [
           require('autoprefixer')({browsers: ['last 2 versions']}), // autoprefixer setting
