@@ -457,7 +457,7 @@ a:hover{color:#37510F;}
 
 .description p{margin-top:10px;margin-bottom:20px;}
 
-.caption{margin-top:5px;font-size:11px;color:#444;text-align:right;}
+.caption{display:block;margin-top:5px;font-size:11px;color:#444;text-align:right;}
 .caption-left{margin-top:5px;font-size:11px;color:#444;text-align:left;}
 
 .imagenav{border-bottom:1px solid #ddd;margin-bottom:20px;}
@@ -468,6 +468,33 @@ a:hover{color:#37510F;}
 .imagenav .next:after{content:"\20\bb\20";}
 
 .gallery{text-align: center;margin-top:20px;margin-bottom:20px;}
+
+.skip-links {
+left: 0;
+padding-left: 1em;
+position: absolute;
+top: 0;
+}
+
+.skip-links li {
+list-style-type: none;
+z-index: 1;
+}
+
+.skip-links a {
+left: -9999px;
+position: absolute;
+}
+
+.skip-links a:active,
+.skip-links a:focus {
+background-color: #fff;
+display: block;
+left: 0;
+padding: .5em;
+position: fixed;
+z-index: 25;
+}
 
 @media (max-width:480px){
   .header ul{margin-left:0;margin-right:0;margin-bottom:0;}
