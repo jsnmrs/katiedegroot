@@ -1,9 +1,4 @@
 source 'https://rubygems.org'
 gem 'github-pages'
-gem 'launchy'
-
-group :test do
-  gem 'rake'
-  gem 'html-proofer'
-  gem 'scss-lint'
-end
+gem 'scss_lint'
+gem 'html-proofer'
