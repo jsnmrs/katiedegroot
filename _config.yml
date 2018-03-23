@@ -15,7 +15,7 @@ destination: _site
 permalink: /:categories/:year/:title/
 timezone: America/New_York
 
-exclude: [node_modules, '.sass-cache', Gemfile, Gemfile.lock, README.md, package.json, Gruntfile.js, .scss-lint.yml]
+exclude: [node_modules, '.sass-cache', Gemfile, Gemfile.lock, README.md, .scss-lint.yml, 'CNAME']
 
 collections:
   content:
