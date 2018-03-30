@@ -133,6 +133,14 @@ img {
   padding-right: .5em;
   flex-basis: 25%;
   text-align: center;
+
+  @include media($tablet) {
+    flex-basis: 33%;
+  }
+
+  @include media($mobile) {
+    flex-basis: 50%;
+  }
 }
 
 .card--image {
