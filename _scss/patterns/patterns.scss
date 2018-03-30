@@ -132,11 +132,13 @@ img {
   padding-left: .5em;
   padding-right: .5em;
   flex-basis: 25%;
+  text-align: center;
 }
 
 .card--image {
   display: block;
-  margin-bottom: .5em;
+  margin: .5em auto;
+  max-height: 15em;
 }
 
 .gallery {
