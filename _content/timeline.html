@@ -1,0 +1,20 @@
+---
+layout: default
+title: Timeline
+permalink: timeline/
+---
+
+<div class="container drop">
+
+  <ul class="cards">
+  {% for post in site.posts %}
+    <li class="card">
+      <a href="{{ post.url }}">
+        <img src="/img/{{ post.year }}-{{ post.slug }}.jpg" alt="" class="card--image">
+        {{ post.title }} ({{ post.year }})
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+
+</div>

@@ -118,6 +118,27 @@ img {
   }
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.card {
+  list-style-type: none;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
+  flex-basis: 25%;
+}
+
+.card--image {
+  display: block;
+  margin-bottom: .5em;
+}
+
 .gallery {
   text-align: center;
   margin-top: 1em;
