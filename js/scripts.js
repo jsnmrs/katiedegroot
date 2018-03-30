@@ -1,3 +1,6 @@
 $("[data-fancybox]").fancybox({
-  fullScreen : false
+  fullScreen: false,
+  buttons: [
+    'close'
+  ]
 });
