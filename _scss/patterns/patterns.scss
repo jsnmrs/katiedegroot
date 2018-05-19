@@ -27,7 +27,7 @@ img {
   a {
     &:hover,
     &.on {
-      border-bottom: 1px solid $accent;
+      border-bottom: 1px solid $gray-light;
       text-decoration: none;
     }
   }
@@ -116,6 +116,10 @@ img {
       content: '\00a0\2192';
     }
   }
+}
+
+#year-2018 {
+  display: none;
 }
 
 .cards {
