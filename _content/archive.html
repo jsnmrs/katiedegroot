@@ -16,12 +16,14 @@ category: images
       <ul class="cards">
       {% assign date = currentdate %}
     {% endif %}
+    {% if post.archive == true %}
     <li class="card">
       <a href="{{ post.url }}">
         <img src="/img/{{ post.year }}-{{ post.slug }}.jpg" alt="" class="card__image">
         <p>{{ post.title }}</p>
       </a>
     </li>
+    {% endif %}
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
 
