@@ -11,10 +11,6 @@ section,
   text-align: center;
 }
 
-img {
-  box-shadow: .2em .2em .5em $black-trans;
-}
-
 .header {
   @extend %clearfix;
   margin-top: 2em;
@@ -116,10 +112,6 @@ img {
       content: '\00a0\2192';
     }
   }
-}
-
-#year-2019 {
-  display: none;
 }
 
 .cards {
