@@ -224,6 +224,10 @@ section,
   display: flex;
   width: 50%;
   margin-bottom: 2rem;
+
+  @include media($tablet) {
+    width: 100%;
+  }
 }
 
 .mini__image {
