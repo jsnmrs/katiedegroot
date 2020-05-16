@@ -1,0 +1,19 @@
+---
+layout: default
+title: Archived
+permalink: images/archive-grid/
+category: images
+---
+<div class="container drop">
+
+  <ul class="grid">
+  {% for post in site.posts %}
+    {% if post.archive == true %}
+      <li class="item">
+        <a href="{{ post.url }}"><img src="/img/{{ post.year }}-{{ post.slug }}.jpg" alt="{{ post.title }} ({{ post.year}})" title="{{ post.title }} ({{ post.year}})" class="card__image"></a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+
+</div>

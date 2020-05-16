@@ -214,3 +214,49 @@ section,
     @include span-columns(4);
   }
 }
+
+.mini__outer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini {
+  display: flex;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.mini__image {
+  width: 40%;
+}
+
+.mini_description {
+  width: 60%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.item {
+  list-style-type: none;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
+  flex-basis: 25%;
+  text-align: center;
+
+  @include media($tablet) {
+    flex-basis: 33%;
+  }
+
+  @include media($mobile) {
+    flex-basis: 50%;
+  }
+}
